@@ -1,7 +1,58 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="vendors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+</head>
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+    <div id="fullpage">
+        <div class="section">
+
+        	
+			<div class="head">
+				<h1>Josh Rogers</h1>
+				<p>Creative Developer & Designer</p>
+			</div>
+			
+
+        </div>
+
+        <div class="section">
+        	
+			<div class="project">
+				<div class="projectName">
+				<h1>Project 1</h1>
+				<p>Project description</p>
+				</div>
+			</div>
+			
+		</div>
+        </div>
+
+        <div class="section">
+        	<div class="container">
+			<div class="item">
+			</div>
+			<div class="item">
+				<h1>Josh Rogers</h1>
+				<p>Creative Developer & Designer</p>
+			</div>
+			<div class="item">
+			</div>
+			<div class="item">
+			</div>
+		</div>
+        </div>
+    </div> 
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage();
+        });
+    </script>           
+</body> 
 </html>
