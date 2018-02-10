@@ -36,13 +36,14 @@
 }
 
 /* flexbox container */
-.experience {
+.container {
 	display:flex;
 	width: 70%;
 	height: 70%;
 	background-color: green;
 	margin: auto;
+	overflow: hidden;
 }
 
 /* flexbox items */
-.item {}
+.experienceItem {}
