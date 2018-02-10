@@ -45,5 +45,21 @@
 	overflow: hidden;
 }
 
+.experience {
+	padding-top: 1em;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.contact {
+	padding-top: 1em;
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+.experience h1 {
+
+}
+
 /* flexbox items */
 .experienceItem {}
