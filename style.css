@@ -69,6 +69,7 @@
 	width: 100%;
 	overflow: hidden;
 	height: 100%;
+	cursor: e-resize;
 }
 
 .content {
@@ -89,5 +90,22 @@
 }
 
 .content li.current {
+	visibility: visible;
+}
+
+.indicators {
+	width: 100%;
+	height: 10px;
+	display: flex;
+}
+
+.indicatorItem {
+	height: 10px;
+	width: 100%;
+	background-color: blue;
+	visibility: hidden;
+}
+
+.active {
 	visibility: visible;
 }
