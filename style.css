@@ -87,6 +87,14 @@
   opacity: 0;
   height: 70%;
   position: absolute;
+  display: flex;
+}
+
+img {
+	max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+
 }
 
 .content li.current {
