@@ -4,6 +4,48 @@
     text-align: center;
 }
 
+.scroll{
+	position:absolute;
+	bottom: 80px;
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+/*vertical scroll line*/
+.line-vertical {
+	position:absolute;
+	left: 50%;
+	height: 50px;
+	width: 2px;
+	background-color: black;
+	bottom:0;
+	margin-left: -1px;
+	opacity: 0;
+	z-index: -1;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-name: fadeOutDown;
+    animation-name: fadeOutDown;
+    -webkit-animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  	animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+  	-webkit-animation-iteration-count: infinite;
+  	animation-iteration-count: infinite;
+}
+
+@keyframes fadeOutDown {
+	0% {
+		bottom: 50px;
+		opacity: 1;
+	}
+
+	100% {
+		bottom: -50px;
+		opacity: 0;
+	}
+}
+
+
 /* project box skeleton (carousel to be implemented) */
 .project {
 	width: 70%;
@@ -83,7 +125,7 @@
   padding: 0;
   width: 70%;
   list-style: none;
-  background-color: yellow;
+  background-color: #eee;
   opacity: 0;
   height: 70%;
   position: absolute;
