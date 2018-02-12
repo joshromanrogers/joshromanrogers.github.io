@@ -10,6 +10,18 @@
 	background-color: white;
 	padding-top: 50px;
 	padding-bottom: 10px;
+	animation-duration: 1s;
+	animation-name: appearUp;
+}
+
+@keyframes appearUp {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
 /*vertical scroll line*/
@@ -31,6 +43,8 @@
   	animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   	-webkit-animation-iteration-count: infinite;
   	animation-iteration-count: infinite;
+  	-webkit-animation-delay:1s;
+  	animation-delay:1s;
 }
 
 @keyframes fadeOutDown {
@@ -39,9 +53,15 @@
 		opacity: 1;
 	}
 
+	50% {
+		
+		opacity: 0.7;
+	}
+
 	100% {
-		bottom: -50px;
-		opacity: 0;
+
+		height: 0px;
+		opacity: 0.2;
 	}
 }
 
