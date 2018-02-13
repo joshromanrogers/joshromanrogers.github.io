@@ -10,6 +10,8 @@
 
   var indicators = document.querySelectorAll('.indicatorItem');
   var currentIndicator = indicators[0];
+  var section1 = document.querySelector('.section1');
+
 
 
 
@@ -31,6 +33,24 @@
     currentIndicator.classList.add('active');
   }
 
+
+  function buildAtom() {
+    for (var n = 0; n < 10; n++) {
+      var newAtom = document.createElement("div");
+      newAtom.classList.add('atom');
+      
+      newAtom.style.left = Math.random() * 100 + '%';
+      var delay = Math.random() * 5;
+      newAtom.style.animationDelay = delay + 's';
+      var duration = Math.random() * 10;
+      newAtom.style.animationDuration = duration + 's';
+      document.getElementById('section1').appendChild(newAtom);
+      var overall = delay + duration;
+    }
+    setTimeout(buildAtom, 10000);
+ 
+  }
+
   /* event listeners */
 
   next.addEventListener('click', function() {
@@ -40,3 +60,6 @@
 next.addEventListener('click', function() {
     nextIndicator();
   });
+
+  buildAtom();
+
