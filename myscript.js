@@ -10,10 +10,10 @@
 
   var indicators = document.querySelectorAll('.indicatorItem');
   var currentIndicator = indicators[0];
-  var section1 = document.querySelector('.section1');
+  var section1 = document.querySelector('#section1');
 
-
-
+  const walk = 50;
+  var heading = document.querySelector('.heading');
 
   /* functions */
 
@@ -33,33 +33,65 @@
     currentIndicator.classList.add('active');
   }
 
-
   function buildAtom() {
-    for (var n = 0; n < 10; n++) {
+    for (var n = 0; n < 50; n++) {
       var newAtom = document.createElement("div");
       newAtom.classList.add('atom');
-      
       newAtom.style.left = Math.random() * 100 + '%';
-      var delay = Math.random() * 5;
-      newAtom.style.animationDelay = delay + 's';
-      var duration = Math.random() * 10;
-      newAtom.style.animationDuration = duration + 's';
+      newAtom.style.animationDelay = Math.random() * 20 + 's';
+      newAtom.style.animationDuration = 5 + (Math.random() * 10) + 's';
       document.getElementById('section1').appendChild(newAtom);
-      var overall = delay + duration;
     }
-    setTimeout(buildAtom, 10000);
- 
   }
+    
+
+
+  function atomMove(e){
+    
+    // width & height of background
+    const { offsetWidth: width, offsetHeight: height} = section1;
+    // where cursor was
+    let { offsetX: x, offsetY: y} = e;
+    // if what you're hovering over isn't the background, add the difference
+   if (this !== e.target){
+      x = x + e.target.offsetLeft;
+      y = y + e.target.offsetTop;
+    }
+    
+    const xWalk = Math.round((x / width * walk * 1.2) + (walk / 2));
+    const yWalk = Math.round((y / height * walk * 1.2) + (walk / 2));
+
+    console.log(xWalk, yWalk);
+
+     var atoms = document.querySelectorAll('.atom');
+
+
+    for (var z = 0; z < atoms.length; z++){
+       atoms[z].style.marginLeft = `${-xWalk}px`;
+
+
+     }
+     // atoms[z].style.transform = `translate(${xWalk}, 0)`;
+  
+    
+
+    
+
+  }
+
+  
+
+    buildAtom();
+
 
   /* event listeners */
 
-  next.addEventListener('click', function() {
-    nextSlide();
-  });
+  next.addEventListener('click', nextSlide);
 
-next.addEventListener('click', function() {
-    nextIndicator();
-  });
+  next.addEventListener('click', nextIndicator);
 
-  buildAtom();
+  section1.addEventListener('mousemove', atomMove);
+
+
+
 

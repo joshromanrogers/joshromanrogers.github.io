@@ -133,7 +133,7 @@
 	background-color: white;
 	border-radius: 50%;
 	left: 10%;
-	animation: atomUp 10s;
+	animation: atomUp 20s infinite;
 }
 
 @keyframes atomUp {
