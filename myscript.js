@@ -68,14 +68,26 @@
 
     for (var z = 0; z < atoms.length; z++){
        atoms[z].style.marginLeft = `${-xWalk}px`;
-
-
      }
-     // atoms[z].style.transform = `translate(${xWalk}, 0)`;
-  
-    
+  }
 
+  function handleOrientation(event) {
     
+    var betaX = event.beta;
+    var gammaY = event.gamma;
+
+    if (betaX > 90) { betaX = 90};
+    if (betaX < -90) { betaX = -90};
+
+    betaX += 90;
+    gammaY += 90;
+
+    var atoms = document.querySelectorAll('.atom');
+
+
+    for (var z = 0; z < atoms.length; z++){
+       atoms[z].style.marginLeft = `${-(betaX/180)}px`;
+     }
 
   }
 
@@ -91,6 +103,8 @@
   next.addEventListener('click', nextIndicator);
 
   section1.addEventListener('mousemove', atomMove);
+
+  window.addEventListener("deviceorientation", handleOrientation, true);
 
 
 
