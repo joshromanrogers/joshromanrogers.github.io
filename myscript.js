@@ -71,7 +71,7 @@
      }
   }
 
-  function handleOrientation(event) {
+  /* function handleOrientation(event) {
     
     var betaX = event.beta;
     var gammaY = event.gamma;
@@ -89,7 +89,7 @@
        atoms[z].style.marginLeft = `${-(betaX/180)}px`;
      }
 
-  }
+  } */
 
   
 
@@ -104,7 +104,7 @@
 
   section1.addEventListener('mousemove', atomMove);
 
-  window.addEventListener("deviceorientation", handleOrientation, true);
+  // window.addEventListener("deviceorientation", handleOrientation, true);
 
 
 

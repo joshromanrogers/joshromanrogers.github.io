@@ -1,46 +1,61 @@
 
 /* name and title*/
 
+* {
+	font-family: 'Cormorant', serif;
+	color: #FAFAFA;
+
+}
+
 #section1 {
-	background-color: grey;
 	animation: changeBg 20s infinite alternate;
-	color: #FCFCFC;
+
 }
 
 @keyframes changeBg {
 	0%{
-		background-color: #242424;
+		background-color: #093333;
 	}
 
 	25%{
-		background-color: #3D59AB;
-	}
-
-	50%{
 		background-color: #2F4F4F;
 	}
 
+	50%{
+		background-color: #023A3A;
+	}
+
 	75%{
-		background-color: #191970;
+		background-color: #093333;
+	}
+
+	100%{
+		background-color: #2F4F4F;
 	}
 }
 
 .head {
-    text-align: center;
     overflow: hidden;
+    padding-left: 20%;
 }
 
 .heading {
 
-	transform: translateY(5rem);
-	animation: up 1.5s linear forwards;
+	transform: translateY(12rem);
+	animation: up 2.5s linear forwards;
 	z-index: 1;	
 	overflow: hidden;
+	font-family: 'Cormorant', serif;
+	font-size: 7vw;
+	margin: 2% 0;
 
 }
 
 .delay {
 	animation-delay: 1s;
+	font-size: 2vw;
+	font-family: 'Cormorant', serif;
+	font-weight: bold;
 }
 
 @keyframes up {
@@ -69,6 +84,8 @@
   	animation-delay:3s;
   	-webkit-animation-fill-mode: forwards;
   	animation-fill-mode: forwards;
+  	font-style: italic;
+  	font-weight: bold;
 }
 
 @keyframes appear {
@@ -158,14 +175,12 @@
 .project {
 	width: 70%;
 	height: 70%;
-	background-color: black;
 	margin: auto;
 }
 
 /* project names and descriptions, seperate from/on top of project boxes*/
 .projectName {
 		position: absolute;
-		color: blue;
 		margin-left: -5%;
 		bottom: 17.5%;
 		left: 17.5%;
@@ -190,9 +205,13 @@
 	display:flex;
 	width: 70%;
 	height: 70%;
-	background-color: green;
 	margin: auto;
 	overflow: hidden;
+}
+
+/* background gradient */
+#grad {
+  background: radial-gradient(#0D4A4A 10%, #093333 100%);
 }
 
 .experience {
@@ -233,7 +252,6 @@
   padding: 0;
   width: 70%;
   list-style: none;
-  background-color: #eee;
   opacity: 0;
   height: 70%;
   position: absolute;
@@ -264,7 +282,7 @@ img {
 	margin-left: 2px;
 	height: 10px;
 	width: 5%;
-	background-color: blue;
+	background-color: #C7D8C7;
 	opacity: 0.2;
 }
 
